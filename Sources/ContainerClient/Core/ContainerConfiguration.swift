@@ -23,6 +23,8 @@ public struct ContainerConfiguration: Sendable, Codable {
     public var image: ImageDescription
     /// External mounts to add to the container.
     public var mounts: [Filesystem] = []
+    /// Sockets to publish from container to host.
+    public var publishedSockets: [PublishSocket] = []  
     /// Key/Value labels for the container.
     public var labels: [String: String] = [:]
     /// System controls for the container.
