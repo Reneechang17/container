@@ -596,7 +596,7 @@ public actor SandboxService {
 
         for publishedSocket in config.publishedSockets {
             let socketConfig = UnixSocketConfiguration(
-                source: publishedSocket.containerPath, 
+                source: publishedSocket.containerPath,
                 destination: publishedSocket.hostPath,
                 permissions: publishedSocket.permissions,
                 direction: .outOf
