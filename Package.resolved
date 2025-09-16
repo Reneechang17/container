@@ -1,5 +1,5 @@
 {
-  "originHash" : "8b123d8cf8a3dbc4e8e987debe77c5203e7a491529e8075cf545c335cd69c616",
+  "originHash" : "8e087afc0ee553c06e639689ebaa281d074db0d232d9929206c2809ef9fd3e86",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -13,10 +13,10 @@
     {
       "identity" : "containerization",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:Reneechang17/containerization.git",
+      "location" : "https://github.com/apple/containerization.git",
       "state" : {
-        "branch" : "add-socket-owner-option",
-        "revision" : "9aa7a86ae75014a6252a9b18253d05ee6470eef7"
+        "revision" : "f3641e67cbc934d66f241ceced3a3024565c4d12",
+        "version" : "0.7.2"
       }
     },
     {
@@ -96,8 +96,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-certificates.git",
       "state" : {
-        "revision" : "20c451f1ad8e344e61ddbb34ef196653d4b73ea6",
-        "version" : "1.13.0"
+        "revision" : "4b092f15164144c24554e0a75e080a960c5190a6",
+        "version" : "1.14.0"
       }
     },
     {
