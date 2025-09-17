@@ -731,9 +731,19 @@ public actor SandboxService {
         }
 
         if let socketUrl = Self.hostSocketUrl(config: config) {
+            let socketUser: SocketUser? = {
+                switch config.initProcess.user {
+                case .raw(let username):
+                    return .username(username)
+                case .id(let uid, let gid):
+                    return .uidGid(uid: uid, gid: gid)
+                }
+            }()
+
             let socketConfig = UnixSocketConfiguration(
                 source: socketUrl,
                 destination: URL(fileURLWithPath: Self.sshAuthSocketGuestPath),
+                user: socketUser,
                 direction: .into
             )
             czConfig.sockets.append(socketConfig)
